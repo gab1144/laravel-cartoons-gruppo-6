@@ -5,6 +5,8 @@ header {
     height: 80px;
     background-color: #0078aa;
     padding: 0 30px;
+    display: flex;
+    align-items: center;
     ul {
         display: flex;
         align-items: center;
@@ -41,4 +43,11 @@ footer {
         margin-left: 20px;
         font-size: 30px;
     }
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.detail-img {
+    width: 300px;
 }
