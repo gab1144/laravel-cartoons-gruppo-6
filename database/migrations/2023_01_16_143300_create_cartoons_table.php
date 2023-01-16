@@ -19,11 +19,11 @@ return new class extends Migration
             $table->string('slug',150)->unique();
             $table->year('year');
             $table->string('creator');
-            $table->string('rating',20);
+            $table->string('rating',20)->nullable();
             $table->string('genre');
-            $table->tinyInteger('runtime_in_minutes');
+            $table->tinyInteger('runtime_in_minutes')->nullable();
             $table->smallInteger('episodes');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
 
         });
