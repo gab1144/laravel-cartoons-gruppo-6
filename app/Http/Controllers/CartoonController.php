@@ -16,7 +16,7 @@ class CartoonController extends Controller
     {
         $cartoons = Cartoon::paginate(10);
 
-        return view('cartoons.index',compact('cartoons'));
+        return view('cartoons.index', compact('cartoons'));
     }
 
     /**
@@ -82,6 +82,8 @@ class CartoonController extends Controller
      */
     public function destroy(Cartoon $cartoon)
     {
-        //
+        $cartoon->delete();
+
+        return redirect()->route('cartoons.index')->with('deleted', "$cartoon->title è stato eliminato correttamente");
     }
 }
