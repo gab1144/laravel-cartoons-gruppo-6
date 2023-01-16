@@ -14,8 +14,8 @@
           <h5 class="card-title">{{$cartoon->title}}</h5>
           <p class="card-text">{{$cartoon->genre}}</p>
           <a href="{{route('cartoons.show', $cartoon)}}" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a>
-          <a href="#" class="btn btn-primary"><i class="fa-solid fa-pencil"></i></a>
-          <a href="#" class="btn btn-primary"><i class="fa-solid fa-trash"></i></a>
+          <a href="{{route('cartoons.edit', $cartoon)}}" class="btn btn-primary"><i class="fa-solid fa-pencil"></i></a>
+          <a href="" class="btn btn-primary"><i class="fa-solid fa-trash"></i></a>
 
         </div>
       </div>
