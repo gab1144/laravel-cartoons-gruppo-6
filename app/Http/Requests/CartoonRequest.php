@@ -29,7 +29,7 @@ class CartoonRequest extends FormRequest
             'creator'=>'required|min:3|max:100',
             'genre'=>'required|min:2',
             'episodes'=>'required|min:1',
-            'image'=>'required|min:10'
+            'runtime_in_minutes'=>'required|min:1'
 
         ];
     }
@@ -47,8 +47,8 @@ class CartoonRequest extends FormRequest
             'genre.min'=>'Il genere deve contenere almeno :min caratteri',
             'episodes.required'=>'Il numero di episodi è obbligatorio',
             'episodes.min'=>'Il numero di episodi deve essere almeno :min',
-            'image.required'=>'L\'url è un campo obbligatorio',
-            'image.min'=>'L\'url deve contenere almeno :min caratteri',
+            'runtime_in_minutes.required'=>'La durata in minuti è un campo obbligatorio',
+            'runtime_in_minutes.min'=>'La durata in minuti deve essere almeno :min',
         ];
     }
 }

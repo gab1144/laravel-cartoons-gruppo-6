@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('genre');
             $table->tinyInteger('runtime_in_minutes')->nullable();
             $table->smallInteger('episodes');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
 
         });

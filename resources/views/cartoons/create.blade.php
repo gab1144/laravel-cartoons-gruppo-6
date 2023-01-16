@@ -52,7 +52,12 @@
 
         <div class="mb-3">
             <label for="runtime_in_minutes" class="form-label">Minutes</label>
-            <input type="number" class="form-control" name="runtime_in_minutes" id="runtime_in_minutes" value="{{old('runtime_in_minutes')}}" placeholder="Insert minutes..">
+            <input type="number" class="form-control @error('runtime_in_minutes') is-invalid @enderror" name="runtime_in_minutes" id="runtime_in_minutes" value="{{old('runtime_in_minutes')}}" placeholder="Insert minutes..">
+            @error('runtime_in_minutes')
+              <div class="invalid-feedback">
+                {{$message}}
+             </div>
+            @enderror
         </div>
 
         <div class="mb-3">
