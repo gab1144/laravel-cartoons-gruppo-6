@@ -10,6 +10,8 @@ class Cartoon extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['title', 'year', 'creator', 'rating', 'genre', 'runtime_in_minutes', 'episodes', 'image'];
+
     public static function generateSlug($string)
     {
         $slug = Str::slug($string, '-');
