@@ -21,17 +21,12 @@
                             <a href="{{route('cartoons.show', $cartoon)}}" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a>
                             <a href="{{route('cartoons.edit', $cartoon)}}" class="btn btn-primary"><i class="fa-solid fa-pencil"></i></a>
 
-                            <form onsubmit="return confirm('Confermi l\'eliminazione di: {{ $cartoon->title }}')"
-                                action="{{ route('cartoons.destroy', $cartoon) }}" method="POST" class="d-inline">
-                                @csrf
-                                @method('DELETE')
-
-                                <button type="submit" href="#" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
-                            </form>
+                           @include('partials.form-delete')
                         </div>
                     </div>
                 </div>
             @endforeach
+            {{$cartoons->links()}}
         </div>
     </div>
 @endsection

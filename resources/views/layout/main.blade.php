@@ -7,7 +7,7 @@
     @vite('resources/js/app.js')
 
 
-    <title>Document</title>
+    <title>Cartoons</title>
 </head>
 <body>
 
