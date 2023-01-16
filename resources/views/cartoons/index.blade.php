@@ -13,7 +13,10 @@
         <div class="card-body">
           <h5 class="card-title">{{$cartoon->title}}</h5>
           <p class="card-text">{{$cartoon->genre}}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a>
+          <a href="#" class="btn btn-primary"><i class="fa-solid fa-pencil"></i></a>
+          <a href="#" class="btn btn-primary"><i class="fa-solid fa-trash"></i></a>
+
         </div>
       </div>
     </div>
