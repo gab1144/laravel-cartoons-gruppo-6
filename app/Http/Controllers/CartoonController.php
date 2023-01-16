@@ -59,7 +59,7 @@ class CartoonController extends Controller
      */
     public function edit(Cartoon $cartoon)
     {
-        return view('cartoons.edit', $cartoon);
+        return view('cartoons.edit', compact('cartoon'));
     }
 
     /**
