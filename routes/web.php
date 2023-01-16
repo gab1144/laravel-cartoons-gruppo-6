@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CartoonController;
+use App\Models\Cartoon;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[CartoonController::class,'index'])->name('home');
+
+Route::resource('cartoons',CartoonController::class);

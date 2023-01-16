@@ -14,7 +14,9 @@ class CartoonController extends Controller
      */
     public function index()
     {
-        //
+        $cartoons = Cartoon::paginate(10);
+
+        return view('cartoons.index',compact('cartoons'));
     }
 
     /**
