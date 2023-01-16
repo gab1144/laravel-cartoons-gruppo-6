@@ -37,7 +37,7 @@ class CartoonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -59,7 +59,7 @@ class CartoonController extends Controller
      */
     public function edit(Cartoon $cartoon)
     {
-        //
+        return view('cartoons.edit', $cartoon);
     }
 
     /**
@@ -71,7 +71,19 @@ class CartoonController extends Controller
      */
     public function update(Request $request, Cartoon $cartoon)
     {
-        //
+
+        $form_data=$request->all();
+
+        if($form_data['title'] != $cartoon->title){
+            $form_data['slug']=Cartoon::generateSlug($form_data['title']);
+        } else {
+            $form_data['slug'] = $cartoon->slug;
+        }
+
+        $cartoon->update($form_data);
+
+        return redirect()->route('cartoons.show',$cartoon);
+
     }
 
     /**
